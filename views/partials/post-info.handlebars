@@ -1,12 +1,16 @@
-<section class="d-flex flex-row justify-content-between">
-    <div class="col-md-10">
-      <div class="card">
-        <h3 class="card-header">Post Title</h3>
-        <article class="card-body">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos est numquam 
-          aliquid dolorem, explicabo suscipit nisi expedita libero quas quos recusandae nulla 
-          iusto? Iste quisquam nam expedita ad quis consectetur.
-        </article>
+<section class="d-flex flex-row justify-content-between mb-4">
+  <div class="col-md-10">
+    <div class="card">
+      <div class="header d-flex flex-row justify-content-between">
+        <h3 class="card-header">{{title}}</h3>
+        <span class="card-header">Posted by
+          {{user.username}}
+          on
+          {{format_date created_at}}</span>
       </div>
+      <article class="card-body">
+        {{content}}
+      </article>
     </div>
-  </section>
+  </div>
+</section>
