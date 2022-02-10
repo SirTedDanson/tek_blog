@@ -141,6 +141,13 @@ p {
   border-radius: var(--border-radius);
 }
 
+.form a {
+  padding-top: 10px;
+  font-weight: bold;
+  color: rgb(46, 46, 248);
+  cursor: pointer;
+}
+
 /* RESPONSIVENESS */
 @media screen and (max-width: 1400px) {
   header nav ul {

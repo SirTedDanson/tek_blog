@@ -41,6 +41,16 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// generate signup page
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("signup");
+});
+
 router.post("/", (req, res) => {
   res.json(`User ${req.method} request received!`);
 });
