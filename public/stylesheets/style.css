@@ -110,9 +110,9 @@ p {
   background-color: var(--dark);
 }
 
-.form-label {
+.card article, .form-label {
   font-size: 1.1rem;
-
+  font-weight: bold;
 }
 
 .form-input {
