@@ -101,8 +101,10 @@ router.post('/login', (req, res) => {
 
 // logout route
 router.post('/logout', (req, res) => {
+  res.json({ message: 'You are now logged out!' });
   if (req.session.loggedIn) {
     req.session.destroy(() => {
+      
       res.status(204).end();
     });
   }
