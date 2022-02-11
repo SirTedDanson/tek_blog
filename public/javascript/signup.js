@@ -1,4 +1,3 @@
-
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -23,4 +22,6 @@ async function signupFormHandler(event) {
   }
 }
 
-document.getElementById("signup-form").addEventListener("submit", signupFormHandler);
+document
+  .getElementById("signup-form")
+  .addEventListener("submit", signupFormHandler);

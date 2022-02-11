@@ -27,11 +27,11 @@ router.get("/:id", (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'created_at'],
+        attributes: ["id", "comment_text", "created_at"],
         include: {
           model: Post,
-          attributes: ['title']
-        }
+          attributes: ["title"],
+        },
       },
     ],
   })
@@ -70,21 +70,21 @@ router.post("/", (req, res) => {
 });
 
 // login route
-router.post('/login', (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
-      username: req.body.username
-    }
-  }).then(dbUserData => {
+      username: req.body.username,
+    },
+  }).then((dbUserData) => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that username!' });
+      res.status(400).json({ message: "No user with that username!" });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      res.status(400).json({ message: "Incorrect password!" });
       return;
     }
 
@@ -92,22 +92,20 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-  
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
+
+      res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
 });
 
 // logout route
-router.post('/logout', (req, res) => {
-  res.json({ message: 'You are now logged out!' });
+router.post("/logout", (req, res) => {
+  res.json({ message: "You are now logged out!" });
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      
       res.status(204).end();
     });
-  }
-  else {
+  } else {
     res.status(404).end();
   }
 });

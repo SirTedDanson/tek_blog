@@ -1,7 +1,12 @@
-{{#each posts as |post|}}
-
-  {{> post-info post }}
-
-{{/each}}
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+    <a href="/dashboard/edit/{{post.id}}" class="button">
+      {{> post-title post}}
+    </a>
+    {{/each}}
+</section>
+{{/if}}
 
 <a href="/add-post" id="new-post" class="btn mx-auto">+ New Post</a>

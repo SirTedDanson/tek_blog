@@ -21,7 +21,10 @@ body {
   font-size: 16px;
 }
 
-header a, button {
+
+
+header a,
+button {
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -34,8 +37,9 @@ header button {
   text-decoration: none;
 }
 
-header button:hover {
+header button:hover, a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
 
 header nav ul {
@@ -115,7 +119,8 @@ p {
   box-shadow: 2px 2px var(--dark);
 }
 
-#newpost, #create-btn {
+#newpost,
+#create-btn {
   width: auto;
   padding: 10px;
 }
@@ -130,9 +135,11 @@ p {
 .card-header {
   color: var(--primary);
   background-color: var(--dark);
+  cursor: pointer;
 }
 
-.card article, .form-label {
+.card article,
+.form-label {
   font-size: 1.1rem;
   font-weight: bold;
 }
