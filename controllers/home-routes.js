@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
 // generate login page
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
 
@@ -44,23 +44,16 @@ router.get("/login", (req, res) => {
 // generate signup page
 router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
 
   res.render("signup");
 });
 
-router.post("/", (req, res) => {
-  res.json(`User ${req.method} request received!`);
-});
-
-router.put("/", (req, res) => {
-  res.json(`User ${req.method} request received!`);
-});
-
-router.delete("/", (req, res) => {
-  res.json(`User ${req.method} request received!`);
+// create new post page
+router.get("/add-post", (req, res) => {
+  res.render("add-post");
 });
 
 module.exports = router;

@@ -115,6 +115,11 @@ p {
   box-shadow: 2px 2px var(--dark);
 }
 
+#newpost, #create-btn {
+  width: auto;
+  padding: 10px;
+}
+
 /* CARDS */
 .card {
   border: 3px solid var(--dark);
