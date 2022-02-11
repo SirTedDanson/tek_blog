@@ -50,9 +50,7 @@ router.get("/edit/:id", (req, res) => {
   })
   .then(dbPostData => {
     if (dbPostData) {
-      console.log("dbPostData = ", dbPostData)
       const post = dbPostData.get({ plain: true });
-      console.log("after get = ", post)
       
       res.render('edit-post', {
         post,
