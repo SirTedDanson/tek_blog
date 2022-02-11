@@ -30,7 +30,11 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/dashboard">Dashboard</a>
+            {{#if loggedIn}}
+              <a href="/dashboard">Dashboard</a>
+            {{else}}
+              <a href="/">Dashboard</a>
+            {{/if}}
           </li>
           <li>
             {{#if loggedIn}}

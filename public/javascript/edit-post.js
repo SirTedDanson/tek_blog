@@ -25,5 +25,5 @@ async function editFormHandler(event) {
 }
 
 document
-  .getElementById("edit-post-form")
-  .addEventListener("submit", editFormHandler);
+  .getElementById("edit-btn")
+  .addEventListener("click", editFormHandler);
