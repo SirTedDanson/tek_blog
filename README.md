@@ -15,7 +15,7 @@
     <a href="https://github.com/SirTedDanson/tek_blog"><strong>Project Documents »</strong></a>
     <br />
     <br />
-    <a href="https://watch.screencastify.com/v/D9txbn5oCEmJJBwb6oze">View Demo</a>
+    <a href="https://still-stream-27999.herokuapp.com/">Application</a>
     ·
     <a href="https://github.com/SirTedDanson/tek_blog/issues">Report Bug</a>
     ·
