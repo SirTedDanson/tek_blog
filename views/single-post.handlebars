@@ -9,13 +9,13 @@
       <h3 class="card-header"></h3>
       <form id="new-post-form" class="card-body">
         <label for="comment" class="form-label">Comment</label>
-        <input
-          type="textarea"
-          name="comment"
+        <textarea required
           id="comment"
+          name="comment"
+          oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
           autofocus="true"
-          class="form-input"
-        />
+          class="form-input p-1 pl-3"
+        ></textarea>
         <button id="comment-btn" type="submit" class="btn">Submit</button>
       </form>
     </div>
