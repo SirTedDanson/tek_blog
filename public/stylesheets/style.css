@@ -21,8 +21,7 @@ body {
   font-size: 16px;
 }
 
-
-
+a,
 header a,
 button {
   text-decoration: none;
@@ -37,7 +36,8 @@ header button {
   text-decoration: none;
 }
 
-header button:hover, a:hover {
+header button:hover,
+a:hover {
   text-decoration: underline;
   color: var(--secondary);
 }
@@ -74,6 +74,9 @@ p {
   font-size: 1.2rem;
 }
 
+textarea {
+  overflow: hidden;
+}
 .hero {
   padding: 3% 4%;
   background-color: var(--dark);
@@ -89,6 +92,12 @@ p {
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
+}
+
+.login-signup {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: rgb(57, 57, 255);
 }
 
 .header {
