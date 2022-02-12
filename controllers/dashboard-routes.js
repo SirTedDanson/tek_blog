@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
+const withAuth = require('../utils/auth')
 const { Post, User, Comment } = require("../models");
 
 // get all users posts for dashboard
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
       user_id: req.session.user_id,
@@ -30,7 +30,7 @@ router.get("/", (req, res) => {
 });
 
 // edit a post
-router.get("/edit/:id", (req, res) => {
+router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: ["id", "title", "content", "created_at"],
     include: [
@@ -62,6 +62,13 @@ router.get("/edit/:id", (req, res) => {
   })
   .catch(err => {
     res.status(500).json(err);
+  });
+});
+
+// create new post page
+router.get("/add-post", (req, res) => {
+  res.render('add-post', {
+    loggedIn: true
   });
 });
 

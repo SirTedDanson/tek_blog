@@ -96,7 +96,7 @@ textarea {
 
 .login-signup {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgb(57, 57, 255);
 }
 
@@ -185,5 +185,6 @@ textarea {
 @media screen and (max-width: 768px) {
   header nav ul {
     margin-right: 5%;
+    font-size: 1.2rem;
   }
 }

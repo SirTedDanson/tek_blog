@@ -94,9 +94,4 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-// create new post page
-router.get("/add-post", (req, res) => {
-  res.render("add-post");
-});
-
 module.exports = router;
