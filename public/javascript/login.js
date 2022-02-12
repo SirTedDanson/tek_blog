@@ -1,3 +1,4 @@
+// Send user inputed data to server endpoint for login verification api/users/login POST
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -6,7 +7,7 @@ async function loginFormHandler(event) {
 
   if (username && password) {
     const response = await fetch("/api/users/login", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         username,
         password,

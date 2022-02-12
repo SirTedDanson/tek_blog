@@ -1,3 +1,4 @@
+// Send delete action to server endpoint api/posts DELETE
 async function deleteFormHandler(event) {
   event.preventDefault();
 

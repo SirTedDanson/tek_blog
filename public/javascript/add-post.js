@@ -1,8 +1,9 @@
+// Send user inputed data to server endpoint api/posts POST
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const title = document.getElementById('title').value.trim();
-  const content = document.getElementById('content').value.trim();
+  const title = document.getElementById("title").value.trim();
+  const content = document.getElementById("content").value.trim();
 
   if (title && content) {
     const response = await fetch(`/api/posts`, {

@@ -62,7 +62,7 @@ router.get("/post/:id", (req, res) => {
       }
 
       const post = dbPostData.get({ plain: true });
-
+      // render single post page, send post data and loggedIn
       res.render("single-post", {
         post,
         loggedIn: req.session.loggedIn,

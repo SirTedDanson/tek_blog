@@ -1,3 +1,4 @@
+/* BASE STYLINGS */
 :root {
   --primary: #ccdad1;
   --secondary: #9caea9;
@@ -21,6 +22,14 @@ body {
   font-size: 16px;
 }
 
+/* HERO */
+.hero {
+  padding: 3% 4%;
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+/* HEADER & LINKS */
 a,
 header a,
 button {
@@ -53,6 +62,12 @@ header nav ul li a:hover {
   color: var(--secondary-color);
 }
 
+.header {
+  background-color: var(--dark);
+}
+
+/* MAIN */
+
 h1,
 h2,
 h3,
@@ -77,11 +92,8 @@ p {
 textarea {
   overflow: hidden;
 }
-.hero {
-  padding: 3% 4%;
-  background-color: var(--dark);
-  color: var(--primary);
-}
+
+/* CUSTOM */
 
 .app-title {
   font-size: 3rem;
@@ -100,9 +112,6 @@ textarea {
   color: rgb(57, 57, 255);
 }
 
-.header {
-  background-color: var(--dark);
-}
 
 /* BUTTONS */
 .btn {
