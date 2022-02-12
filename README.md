@@ -239,7 +239,7 @@ For answers to common questions about this code of conduct, see the FAQ at
 
 ## Tests
 
-- Tested with Jest [](./lib/images/tests.PNG)
+- Tested with Jest ![](./lib/images/tests.PNG)
 
   <p align="right">(<a href="#top">back to top</a>)</p>
 
